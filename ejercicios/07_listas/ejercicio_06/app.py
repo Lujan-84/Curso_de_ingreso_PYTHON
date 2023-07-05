@@ -30,7 +30,7 @@ class App(customtkinter.CTk):
         suma_total = sum(self.lista_datos)
         sumandos = len(self.lista_datos)
         promedio = suma_total/sumandos
-        mensaje = "El promedio es: {}" + str(promedio)
+        mensaje = "El promedio es: " + str(promedio)
         alert("Mensaje",mensaje)
     
 if __name__ == "__main__":
