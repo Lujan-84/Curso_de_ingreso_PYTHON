@@ -40,7 +40,19 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        #Asigno a una variable el dato obtenido de la caja de texto
+        sueldo_ingresado = self.txt_sueldo.get()
+        incremento_ingresado = self.txt_incremento.get()
+        #Convierto el dato a int(entero)
+        sueldo_ingresado = int(sueldo_ingresado)
+        incremento_ingresado = int(incremento_ingresado)
+        #Calculo el sueldo actualizado con incremento
+        sueldo_con_incremento = sueldo_ingresado*(1+incremento_ingresado/100)
+        #Creo mensaje
+        mensaje = "El sueldo actualizado con el incremento porcentual del " + str(incremento_ingresado) + " % es de: " + str(sueldo_con_incremento)
+        #Muestro mensaje
+        alert("Mensaje",mensaje)
+        
         
     
 if __name__ == "__main__":
