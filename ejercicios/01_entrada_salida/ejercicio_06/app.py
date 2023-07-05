@@ -52,7 +52,7 @@ class App(customtkinter.CTk):
         suma = operador_a + operador_b
         
         #Creo mensaje
-        mensaje = "El resultado de la suma es: {}".format(suma)
+        mensaje = "El resultado de la suma es: " + str(suma)
         #Muestro mensaje con Dialogo Alert
         alert("Suma",mensaje)
      

@@ -58,8 +58,8 @@ class App(customtkinter.CTk):
         operador_b = int(operador_b)
         #Asigno la suma de los datos a una variable
         sumar = operador_a + operador_b
-        #Creo el mensaje a mostrar
-        mensaje = "El resultado de la suma es: {}".format(sumar)
+        #Creo el mensaje a mostrar concatenando
+        mensaje = "El resultado de la suma es: " + str(sumar)
         #Muestro mensaje con Dialogo Alert
         alert("Sumar",mensaje)
 
@@ -70,7 +70,7 @@ class App(customtkinter.CTk):
         operador_a = int(operador_a)
         operador_b = int(operador_b)
         restar = operador_a - operador_b
-        mensaje = "El resultado de la resta es: {}".format(restar)
+        mensaje = "El resultado de la resta es: " + str(restar)
         alert("Restar",mensaje)
 
     def btn_multiplicar_on_click(self):
@@ -79,7 +79,7 @@ class App(customtkinter.CTk):
         operador_a = int(operador_a)
         operador_b = int(operador_b)
         multiplicar = operador_a * operador_b
-        mensaje = "El resultado de la multiplicación es: {}".format(multiplicar)
+        mensaje = "El resultado de la multiplicación es: " + str(multiplicar)
         alert("Multiplicar",mensaje)
 
     def btn_dividir_on_click(self):
@@ -88,7 +88,7 @@ class App(customtkinter.CTk):
         operador_a = int(operador_a)
         operador_b = int(operador_b)
         dividir = operador_a / operador_b
-        mensaje = "El resultado de la división es: {}".format(dividir)
+        mensaje = "El resultado de la división es: " + str(dividir)
         alert("Dividir",mensaje)
         
 if __name__ == "__main__":
