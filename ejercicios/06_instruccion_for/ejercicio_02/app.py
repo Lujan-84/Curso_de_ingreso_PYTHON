@@ -7,7 +7,10 @@ import random
 
 
 '''
-Al presionar el botón Mostrar 5 veces un mensaje (utilizando el Dialog Alert) con números ASCENDENTES, desde el 1 al 5.
+nombre: Lujan
+apellido: Miguel
+----
+Al presionar el botón Mostrar 5 veces un mensaje (utilizando el Dialog Alert) con números DESCENDENTES, desde el 1 al 5.
 '''
 
 class App(customtkinter.CTk):
@@ -23,7 +26,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass    
+        contador = 5
+        for i in range(5):
+            alert(title="Alert",message=i+contador)
+            contador -= 2
+               
        
             
 

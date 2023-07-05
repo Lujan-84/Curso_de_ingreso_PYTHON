@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Lujan
+apellido: Miguel
 ---
 Ejercicio: entrada_salida_07
 ---
@@ -50,16 +50,46 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-        pass
+        #Asigno los datos obtenidos de las cajas de texto a las variables
+        operador_a = self.txt_operador_a.get()
+        operador_b = self.txt_operador_b.get()
+        #Convierto los datos obtenidos a int(enteros)
+        operador_a = int(operador_a)
+        operador_b = int(operador_b)
+        #Asigno la suma de los datos a una variable
+        sumar = operador_a + operador_b
+        #Creo el mensaje a mostrar
+        mensaje = "El resultado de la suma es: {}".format(sumar)
+        #Muestro mensaje con Dialogo Alert
+        alert("Sumar",mensaje)
+
 
     def btn_restar_on_click(self):
-        pass
+        operador_a = self.txt_operador_a.get()
+        operador_b = self.txt_operador_b.get()
+        operador_a = int(operador_a)
+        operador_b = int(operador_b)
+        restar = operador_a - operador_b
+        mensaje = "El resultado de la resta es: {}".format(restar)
+        alert("Restar",mensaje)
 
     def btn_multiplicar_on_click(self):
-        pass
+        operador_a = self.txt_operador_a.get()
+        operador_b = self.txt_operador_b.get()
+        operador_a = int(operador_a)
+        operador_b = int(operador_b)
+        multiplicar = operador_a * operador_b
+        mensaje = "El resultado de la multiplicación es: {}".format(multiplicar)
+        alert("Multiplicar",mensaje)
 
     def btn_dividir_on_click(self):
-        pass
+        operador_a = self.txt_operador_a.get()
+        operador_b = self.txt_operador_b.get()
+        operador_a = int(operador_a)
+        operador_b = int(operador_b)
+        dividir = operador_a / operador_b
+        mensaje = "El resultado de la división es: {}".format(dividir)
+        alert("Dividir",mensaje)
         
 if __name__ == "__main__":
     app = App()
