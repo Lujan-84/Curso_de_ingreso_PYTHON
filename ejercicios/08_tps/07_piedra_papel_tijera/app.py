@@ -52,19 +52,38 @@ class App(customtkinter.CTk):
 
 
     def cpu_elije(self):
-        pass
+        self.seleccion_cpu = random.randrange(1,4)
+         
      
     def btn_piedra_on_click(self):
         self.deshabilitar_botones()
-        pass
+        if (self.seleccion_cpu == 1):
+            mensaje = "Empató" 
+        elif (self.seleccion_cpu == 2):
+            mensaje = "Perdió"
+        else:
+            mensaje = "Ganó"
+        alert("Resultado",mensaje)
 
     def btn_papel_on_click(self):
         self.deshabilitar_botones()
-        pass
+        if (self.seleccion_cpu == 2):
+            mensaje = "Empató" 
+        elif (self.seleccion_cpu == 3):
+            mensaje = "Perdió"
+        else:
+            mensaje = "Ganó"
+        alert("Resultado",mensaje)
 
     def btn_tijera_on_click(self):
         self.deshabilitar_botones()
-        pass
+        if (self.seleccion_cpu == 3):
+            mensaje = "Empató" 
+        elif (self.seleccion_cpu == 1):
+            mensaje = "Perdió"
+        else:
+            mensaje = "Ganó"
+        alert("Resultado",mensaje)
         
 
 if __name__ == "__main__":

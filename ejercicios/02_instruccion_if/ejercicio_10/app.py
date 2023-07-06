@@ -7,8 +7,8 @@ import random
 
 
 '''
-nombre:
-apellido:
+nombre: Lujan
+apellido: Miguel
 ---
 Ejercicio: instrucion_if_10
 ---
@@ -33,8 +33,15 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass  
-            
+        nota = random.randint(1,10) 
+        if (nota > 5):
+            mensaje = "Promoción directa, la nota es: " + str(nota)
+        elif (nota < 4):
+            mensaje = "Desaprobado, la nota es: " + str(nota)
+        else:
+            mensaje = "Aprobado, la nota es: " + str(nota)
+
+        alert("Mensaje" , mensaje)
 
 if __name__ == "__main__":
     app = App()

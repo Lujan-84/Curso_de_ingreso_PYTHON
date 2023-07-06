@@ -36,7 +36,7 @@ class App(customtkinter.CTk):
         #Asigno a la variable creada lo retornado por prompt
         nombre = prompt(title="Mensaje",prompt="Ingrese nombre: ")
         #Muestro en caja de texto el dato obtenido
-        self.txt_nombre.delete(0,100)
+        self.txt_nombre.delete(0,"end")
         self.txt_nombre.insert(0,nombre)
         
     

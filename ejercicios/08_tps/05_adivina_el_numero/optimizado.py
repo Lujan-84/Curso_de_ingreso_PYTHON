@@ -4,6 +4,7 @@ from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
 import customtkinter
 import random
+import time
 
 
 '''
@@ -46,7 +47,9 @@ class App(customtkinter.CTk):
             numero = int(self.txt_numero.get())
             self.numero_intento += 1
             if numero == self.numero_secreto:
-                mensaje = "Ganaste en {0} intentos".format(self.numero_intento) 
+                self.ts_fin_juego = time.time()
+                tiempo_de_juego = self.ts_fin_juego - self.ts_inicio_juego
+                mensaje = "Ganaste en {0} intentos en {1} segundos".format(self.numero_intento,tiempo_de_juego) 
                 self.flag_play = False 
             elif numero < self.numero_secreto:
                 mensaje = "Falta"
@@ -66,8 +69,9 @@ class App(customtkinter.CTk):
         self.flag_play = True
         self.numero_secreto = random.randrange(1, 100)
         self.numero_intento = 0
-        print(self.numero_secreto) #Facilita el debug    
-            
+        print(self.numero_secreto) #Facilita el debug 
+        #asigno a una variable el tiempo al inicio del juego
+        self.ts_inicio_juego = time.time()
 
 
 if __name__ == "__main__":

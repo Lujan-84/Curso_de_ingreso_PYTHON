@@ -2,7 +2,7 @@ import tkinter
 from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
-from datetime import time
+import time
 import customtkinter
 
 
@@ -24,7 +24,7 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=1, pady=10, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
+        
         
 
 if __name__ == "__main__":
