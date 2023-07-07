@@ -5,6 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
+ENVIADO HASTA ACA
+--------
 nombre: Lujan
 apellido: Miguel
 ---

@@ -6,6 +6,9 @@ import customtkinter
 
 
 '''
+nombre: Lujan
+apellido: Miguel
+-----
 Enuciado:
 Al presionar el botón ‘Informar’ mostrar mediante alert los siguientes 
 mensajes en función del mes seleccionado:

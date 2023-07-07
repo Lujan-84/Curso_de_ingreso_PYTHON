@@ -53,7 +53,7 @@ class App(customtkinter.CTk):
         #Asigno los datos obtenidos de las cajas de texto a las variables
         operador_a = self.txt_operador_a.get()
         operador_b = self.txt_operador_b.get()
-        #Convierto los datos obtenidos a int(enteros)
+        #Convierto los datos obtenidos a enteros
         operador_a = int(operador_a)
         operador_b = int(operador_b)
         #Asigno la suma de los datos a una variable

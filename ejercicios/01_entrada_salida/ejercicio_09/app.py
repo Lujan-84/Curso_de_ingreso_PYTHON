@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Lujan
+apellido: Miguel
 ---
 Ejercicio: entrada_salida_09
 ---
@@ -43,11 +43,11 @@ class App(customtkinter.CTk):
         #Asigno a una variable el dato obtenido de la caja de texto
         sueldo_ingresado = self.txt_sueldo.get()
         incremento_ingresado = self.txt_incremento.get()
-        #Convierto el dato a int(entero)
-        sueldo_ingresado = int(sueldo_ingresado)
-        incremento_ingresado = int(incremento_ingresado)
+        #Convierto los datos a numeros
+        sueldo_ingresado = float(sueldo_ingresado)
+        incremento_ingresado = float(incremento_ingresado)
         #Calculo el sueldo actualizado con incremento
-        sueldo_con_incremento = sueldo_ingresado*(1+incremento_ingresado/100)
+        sueldo_con_incremento = sueldo_ingresado*(1 + incremento_ingresado/100)
         #Creo mensaje
         mensaje = "El sueldo actualizado con el incremento porcentual del " + str(incremento_ingresado) + " % es de: " + str(sueldo_con_incremento)
         #Muestro mensaje
