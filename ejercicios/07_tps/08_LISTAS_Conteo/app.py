@@ -44,11 +44,47 @@ class App(customtkinter.CTk):
         self.lista = []
 
     def btn_comenzar_ingreso_on_click(self):
-        pass
+        while True:
+            numero = prompt("Datos" , "Ingrese numero")
+            if numero == None:
+                break
+            else:
+                numero = float(numero)
+                self.lista.append(numero)
 
     def btn_mostrar_estadisticas_on_click(self):
-        pass
-
+        suma_positivos = 0
+        suma_negativos = 0
+        contador_positivos = 0
+        contador_negativos = 0
+        contador_ceros = 0
+        minimo_negativos = 0
+        maximo_positivos = 0 
+        for num in self.lista:
+            if num > 0:
+                contador_positivos += 1
+                suma_positivos += num
+                if num > maximo_positivos:
+                    maximo_positivos = num
+            elif num < 0:
+                contador_negativos += 1
+                suma_negativos += num
+                if num < minimo_negativos:
+                    minimo_negativos = num
+            else:
+                contador_ceros += 1
+        if contador_negativos > 0:
+            promedio_negativos = suma_negativos / contador_negativos
+        
+        mensaje = f"""La suma acumulada de los negativos es: {suma_negativos}
+        La suma acumulada de los positivos es: {suma_positivos}
+        Cantidad de numeros positivos ingresados: {contador_positivos}
+        Cantidad de numeros negativos ingresados: {contador_negativos}
+        Cantidad de ceros: {contador_ceros}
+        El minimo de los negativos es: {minimo_negativos}
+        El maximo de los positivos es: {maximo_positivos}
+        El promedio de los negativos es: {promedio_negativos}"""
+        alert("Mensaje" , mensaje)
 
 if __name__ == "__main__":
     app = App()
